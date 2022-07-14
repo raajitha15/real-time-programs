@@ -1,0 +1,43 @@
+import java.util.Scanner;
+class Juice 
+{
+		int product_code;
+		String flavour;
+		String product_type;
+		int product_size;
+		int product_price;
+		public void input()
+	{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter the product code:");
+			product_code=sc.nextInt();
+			System.out.println("enter the flavour");
+			flavour=sc.nextLine();
+			System.out.println("enter the product type:");
+			product_type=sc.nextLine();
+			System.out.println("enter the product size:");
+			product_size=sc.nextInt();
+			System.out.println("enter the product prize:");
+			product_price=sc.nextInt();
+	}
+	public void discount()
+	{
+		product_price=product_price-10;
+	}
+	public void display()
+	{
+		System.out.println("product code:" +product_code);
+		System.out.println("flavour:" +flavour);
+		System.out.println("product type:" +product_type);
+		System.out.println("product_size:" +product_size);
+		System.out.println("product_price:" +product_price);
+	}
+
+	public static void main(String[] args) 
+	{
+		Juice j=new Juice();
+		j.input();
+		j.discount();
+		j.display();
+	}
+}
